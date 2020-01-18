@@ -73,6 +73,7 @@ module Clear::Migration
     end
 
     def execute(up : String? = nil, down : String? = nil)
+      puts "I'm in down"
       @operations << Clear::Migration::Execute.new( up, down )
     end
 
