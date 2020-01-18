@@ -73,8 +73,9 @@ module Clear::Migration
     end
 
     def execute(up : String? = nil, down : String? = nil)
-      puts "I'm in down"
+      puts "I'm in execute"
       @operations << Clear::Migration::Execute.new( up, down )
+      puts @operations
     end
 
     def add_operation(op : Operation)
